@@ -1,0 +1,194 @@
+/* =====================
+   リセット
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background: #87cefa;
+}
+
+/* =====================
+   背景 canvas
+===================== */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* =====================
+   全体
+===================== */
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+  padding: 20px;
+}
+
+/* =====================
+   戻るボタン
+===================== */
+.back-btn {
+  align-self: flex-start;
+  background: #e3a3c3;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* =====================
+   メッセージ
+===================== */
+.message {
+  background: #98d464;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+
+  width: 90%;
+  max-width: 360px;
+
+  font-size: clamp(18px, 5vw, 24px);
+}
+
+/* =====================
+   謎番号
+===================== */
+.quiz-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* =====================
+   画像
+===================== */
+.quiz-image {
+  width: 95%;
+  max-width: 420px;
+}
+
+.quiz-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* =====================
+   入力メッセージ
+===================== */
+.answer-message {
+  background: #b9d36a;
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+  font-weight: bold;
+
+  width: 90%;
+  max-width: 360px;
+  font-size: 20px;
+  margin-bottom: clamp(10px, 2vh, 18px);
+}
+
+/* =====================
+   入力欄
+===================== */
+.answer-area {
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.answer-area input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   ボタン
+===================== */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.send-btn,
+.reset-btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: #e3a3c3;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.send-btn:active,
+.reset-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* =====================
+   正解・不正解表示
+===================== */
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: #ff4444;
+  margin-top: 10px;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+/* 正解表示 */
+.success {
+  text-align: center;
+  background: rgba(255,255,255,0.85);
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.keyword-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #98d464;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+
+/* =====================
+   スマホ最適化
+===================== */
+@media (max-width: 480px) {
+  .message {
+    font-size: 20px;
+  }
+}
