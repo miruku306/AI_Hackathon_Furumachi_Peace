@@ -1,0 +1,76 @@
+/* =====================
+   リセット
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+  background: #87cefa;
+}
+
+/* =====================
+   背景 canvas
+===================== */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* ← 背景化 */
+}
+
+/* =====================
+   UI
+===================== */
+.app {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6vh;
+
+  padding: 20px;
+}
+
+/* メッセージ */
+.message {
+  background: #98d464;
+  border-radius: 22px;
+
+  width: 90%;
+  max-width: 340px;
+
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.6;
+
+  padding: clamp(18px, 5vw, 30px);
+  font-size: clamp(20px, 5.5vw, 26px);
+}
+
+/* ボタン */
+.start-btn {
+  background: #e3a3c3;
+  border: none;
+  border-radius: 30px;
+
+  width: 70%;
+  max-width: 260px;
+
+  padding: clamp(16px, 4vw, 22px);
+  font-size: clamp(20px, 5vw, 24px);
+
+  cursor: pointer;
+}
+
+.start-btn:active {
+  transform: scale(0.96);
+}
