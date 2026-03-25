@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>謎4</title>
+
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<div class="app">
+
+  <a href="index.html" class="back-btn">ホームに戻る</a>
+
+  <div class="message">
+    古町に眠る<br>
+    古マチピースを探せ！！
+  </div>
+
+  <h2 class="quiz-number">【謎4】</h2>
+
+  <div class="quiz-image">
+    <img src="img/Next21.png" alt="謎4">
+  </div>
+
+  <!-- ===== 入力エリア ===== -->
+  <div id="answerSection">
+
+    <div class="answer-message">
+      答えがわかったら<br>
+      入力してね
+    </div>
+
+    <div class="answer-area">
+
+      <input
+        type="text"
+        id="answer"
+        placeholder="答えを入力"
+      >
+
+      <div class="buttons">
+        <button class="send-btn" id="sendBtn">送信</button>
+        <button class="reset-btn" id="resetBtn">取り消し</button>
+      </div>
+
+      <!-- 不正解メッセージ -->
+      <p id="errorMessage" class="error"></p>
+
+    </div>
+
+  </div>
+
+  <!-- ===== 正解表示（最初は非表示）===== -->
+  <div id="successSection" class="success hidden">
+    <h2>🎉 正解！</h2>
+    <p>キーワードを獲得してください</p>
+
+    <a href="next21map.html" class="keyword-btn">
+      キーワード獲得
+    </a>
+  </div>
+
+</div>
+
+<script src="js/bg.js"></script>
+<script src="js/quiz1.js"></script>
+
+</body>
+</html>
