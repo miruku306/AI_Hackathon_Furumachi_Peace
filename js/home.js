@@ -71,7 +71,7 @@ const checkFinalStage = () => {
         finalStage.style.display = "flex"; // 表示
         // 最終問題クリック処理
         finalStage.addEventListener("click", () => {
-            location.href = "quiz5.html";
+            location.href = "finalquestion.html";
         });
     } else {
         finalStage.style.display = "none"; //非表示
