@@ -70,6 +70,13 @@ function initializeQuiz() {
     const userAnswer = input.value.trim().toUpperCase();
 
     if (userAnswer === CORRECT_ANSWER) {
+      // クイズインデックス取得
+      const page = window.location.pathname.split('/').pop().replace('.html', '');
+      const quizIndex = parseInt(page.replace('quiz', '')) - 1;
+
+      // クリア状態保存
+      sessionStorage.setItem(`clear_${quizIndex}`, "true");
+
       // 入力部分を隠す
       answerSection.style.display = "none";
 

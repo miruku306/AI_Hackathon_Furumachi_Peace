@@ -20,8 +20,6 @@ const initGame = () => {
     }
 };
 
-initGame();
-
 // 🔥 状態読み込み
 const loadState = () => {
     stages.forEach((stage, index) => {
