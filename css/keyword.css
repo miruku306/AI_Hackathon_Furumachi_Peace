@@ -1,0 +1,269 @@
+/* Keyword Pages Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  background: #87cefa;
+}
+
+/* =====================
+   背景 canvas
+===================== */
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Background circles */
+.bg-circle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  right: 10%;
+}
+
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 10%;
+}
+
+.circle-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 10%;
+  right: 5%;
+}
+
+/* Main container */
+.container {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header - Keyword title */
+.keyword-box {
+  background-color: #fff8dc;
+  border-radius: 15px;
+  padding: clamp(15px, 4vw, 25px);
+  margin-bottom: clamp(15px, 4vw, 25px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.keyword-box h1 {
+  font-size: clamp(24px, 6vw, 32px);
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.keyword-box .get-text {
+  font-size: clamp(18px, 5vw, 24px);
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Message */
+.message {
+  font-size: clamp(16px, 4.5vw, 20px);
+  color: white;
+  margin-bottom: clamp(20px, 5vw, 30px);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.message .red-x {
+  color: #ff4444;
+  font-size: 1.3em;
+}
+
+.message .memo-text {
+  color: #ff4444;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.message .heart {
+  color: #ff69b4;
+  font-size: 1.3em;
+}
+
+/* Next box */
+.next-box {
+  background-color: #fff8dc;
+  border-radius: 15px;
+  padding: clamp(15px, 4vw, 25px);
+  margin-bottom: clamp(30px, 8vw, 50px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.next-box p {
+  font-size: clamp(20px, 5vw, 28px);
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.next-box .keyword-text {
+  font-size: clamp(36px, 10vw, 60px);
+  color: #ff3333;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Checkmark circles (hidden) */
+.checkmark-group {
+  display: none;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  background-color: #ff3333;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.checkmark:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Rotation animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.checkmark.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Yellow check mark */
+.checkmark::after {
+  content: '✓';
+  color: #ffff00;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Check mark image */
+.accent-line {
+  position: absolute;
+  bottom: -100px;
+  right: -60px;
+  width: clamp(160px, 40vw, 280px);
+  height: clamp(160px, 40vw, 280px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 8;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.accent-line:hover {
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+  transform: scale(1.05);
+}
+
+.accent-line.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Navigation links */
+.nav-links {
+  margin-top: 40px;
+  display: none;
+}
+
+.nav-links a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 24px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .keyword-box h1 {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .keyword-box .get-text {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .message {
+    font-size: clamp(14px, 3.5vw, 18px);
+  }
+
+  .next-box p {
+    font-size: clamp(18px, 4.5vw, 24px);
+  }
+
+  .next-box .keyword-text {
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  .accent-line {
+    bottom: -80px;
+    right: -50px;
+    width: clamp(120px, 35vw, 200px);
+    height: clamp(120px, 35vw, 200px);
+  }
+}
