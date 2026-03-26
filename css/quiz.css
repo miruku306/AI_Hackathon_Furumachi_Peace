@@ -192,3 +192,63 @@ body {
     font-size: 20px;
   }
 }
+
+
+/* =====================
+   最終問題 強化演出（追加）
+===================== */
+
+.final-quiz {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+
+  width: 90%;
+  max-width: 420px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border: 2px solid #e3a3c3;
+}
+
+/* タイトル（ラスボス感） */
+.final-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #e91e63;
+  letter-spacing: 1px;
+}
+
+/* サブテキスト */
+.final-sub {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* キーワードリスト */
+.keyword-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* 各キーワード */
+.keyword-list li {
+  background: #f5f5f5;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+
+  font-weight: bold;
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+/* ホバーで気づき演出 */
+.keyword-list li:hover {
+  background: #e3a3c3;
+  color: white;
+  transform: scale(1.05);
+}
