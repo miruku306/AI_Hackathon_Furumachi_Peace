@@ -55,7 +55,7 @@ const loadKeywords = () => {
 // 🧩 ステージクリック（全ステージ押せる）
 stages.forEach((stage, index) => {
     stage.addEventListener("click", () => {
-        location.href = `nazo${index + 1}.html`;
+        location.href = `quiz${index + 1}.html`;
     });
 });
 
