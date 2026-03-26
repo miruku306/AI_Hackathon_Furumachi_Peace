@@ -3,6 +3,7 @@ const stages = document.querySelectorAll(".stage");
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 const keywordList = document.getElementById("keywordList");
+const finalStage = document.getElementById("final-quiz");
 const GAME_VERSION = "1.0";
 
 // 🍔 ハンバーガー
@@ -59,8 +60,33 @@ stages.forEach((stage, index) => {
     });
 });
 
+const checkFinalStage = () => {
+    let allClear = true;
+
+    // 謎1～4をチェック
+    for (let i = 0; i < 4; i++) {
+        const isClear = sessionStorage.getItem(`clear_${i}`);
+        if (isClear !== "true") {
+            aallClear = false;
+            break;
+        }
+    }
+
+    if (allClear) {
+        finalStage.style.display = "flex"; // 表示
+        // 最終問題クリック処理
+        finalStage.addEventListener("click", () => {
+            location.href = "quiz5.html";
+        });
+    } else {
+        finalStage.style.display = "none"; //非表示
+    }
+}
+
+
 // 初期化
 initGame();
 // 状態読み込み
 loadState();
 loadKeywords();
+checkFinalStage();
