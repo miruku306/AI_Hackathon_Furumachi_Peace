@@ -12,11 +12,11 @@ hamburger.addEventListener("click", () => {
 
 // データ仕様が変わるとき自動リセット（初期化処理）
 const initGame = () => {
-    const savedVersion = localStorage.getItem("game_version");
+    const savedVersion = sessionStorage.getItem("game_version");
 
     if (savedVersion !== GAME_VERSION) {
-        localStorage.clear();
-        localStorage.setItem("game_version", GAME_VERSION);
+        sessionStorage.clear();
+        sessionStorage.setItem("game_version", GAME_VERSION);
     }
 };
 
@@ -25,7 +25,7 @@ initGame();
 // 🔥 状態読み込み
 const loadState = () => {
     stages.forEach((stage, index) => {
-        const isClear = localStorage.getItem(`clear_${index}`);
+        const isClear = sessionStorage.getItem(`clear_${index}`);
 
         if (isClear === "true") {
             stage.classList.add("clear");
@@ -42,7 +42,7 @@ const loadKeywords = () => {
     keywordList.innerHTML = "";
 
     stages.forEach((_, index) => {
-        const keyword = localStorage.getItem(`keyword_${index}`);
+        const keyword = sessionStorage.getItem(`keyword_${index}`);
 
         if (keyword) {
             const li = document.createElement("li");

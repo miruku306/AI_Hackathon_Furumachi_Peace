@@ -36,7 +36,7 @@ function checkAnswer() {
 
   if (userAnswer === CORRECT_ANSWER) {
     // クリア状態保存
-    localStorage.setItem(`clear_${stageIndex}`, "true");    
+    sessionStorage.setItem(`clear_${stageIndex}`, "true");    
 
     // 入力部分を隠す
     answerSection.style.display = "none";
