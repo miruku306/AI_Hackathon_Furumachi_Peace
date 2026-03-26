@@ -142,3 +142,72 @@ body {
 .stage:hover {
     transform: scale(1.03);
 }
+
+/* =====================
+   スマホ対応（レスポンシブデザイン）
+===================== */
+@media (max-width: 768px) {
+    /* ハンバーガー */
+    #hamburger {
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        padding: 5px 8px;
+    }
+
+    /* メニュー */
+    #menu {
+        width: 100%;
+        right: -100%;
+        padding: 50px 20px 20px;
+    }
+
+    #menu.active {
+        right: 0;
+    }
+
+    #menu textarea {
+        height: 150px;
+        font-size: 16px; /* ズーム防止 */
+    }
+
+    #menu button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* メインコンテナ */
+    .container {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    /* タイトル */
+    .title-box h2 {
+        font-size: 20px;
+    }
+
+    /* ストーリー */
+    .story {
+        font-size: 18px;
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    /* ステージ */
+    .stage {
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    .stage span {
+        font-size: 16px;
+    }
+}
