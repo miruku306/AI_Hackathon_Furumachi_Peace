@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>次の目的地古町ルフル広場</title>
+
+  <link rel="stylesheet" href="css/nextmap.css">
+</head>
+
+<body>
+
+  <!-- 背景canvas（必須） -->
+  <canvas id="canvas"></canvas>
+
+  <!-- 画面 -->
+  <div class="app">
+
+    <!-- タイトル -->
+    <div class="card title-card">
+      <h1>次の目的地</h1>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d478.9665777550145!2d139.0444018183161!3d37.9222930174637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff4c97ea8eb5685%3A0x11fefcdc32aa6ae6!2z44Or44OV44Or5bqD5aC0!5e1!3m2!1sja!2sjp!4v1774421487844!5m2!1sja!2sjp"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- 住所 -->
+    <div class="card place-card">
+      <h2>古町ルフル広場</h2>
+      <p class="address">新潟県新潟市中央区古町通７番町９５５</p>
+    </div>
+
+    <!-- 戻るボタン -->
+    <a href="index.html" class="home-btn">ホームに戻る</a>
+
+  </div>
+
+  <script src="js/bg.js"></script>
+
+</body>
+</html>
