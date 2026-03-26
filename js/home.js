@@ -2,7 +2,6 @@
 const stages = document.querySelectorAll(".stage");
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
-const keywordList = document.getElementById("keywordList");
 const finalStage = document.getElementById("final-quiz");
 const GAME_VERSION = "1.0";
 
@@ -38,20 +37,18 @@ const loadState = () => {
     });
 };
 
-// 🔑 キーワード読み込み
-const loadKeywords = () => {
-    keywordList.innerHTML = "";
-
-    stages.forEach((_, index) => {
-        const keyword = sessionStorage.getItem(`keyword_${index}`);
-
-        if (keyword) {
-            const li = document.createElement("li");
-            li.textContent = keyword;
-            keywordList.appendChild(li);
-        }
-    });
+// 🔑 メモ読み込み
+const loadMemo = () => {
+    const memo = sessionStorage.getItem("memo") || "";
+    document.getElementById("memo").value = memo;
 };
+
+// 💾 メモ保存
+document.getElementById("saveMemo").addEventListener("click", () => {
+    const memo = document.getElementById("memo").value;
+    sessionStorage.setItem("memo", memo);
+    alert("メモを保存しました");
+});
 
 // 🧩 ステージクリック（全ステージ押せる）
 stages.forEach((stage, index) => {
@@ -67,7 +64,7 @@ const checkFinalStage = () => {
     for (let i = 0; i < 4; i++) {
         const isClear = sessionStorage.getItem(`clear_${i}`);
         if (isClear !== "true") {
-            aallClear = false;
+            allClear = false;
             break;
         }
     }
@@ -88,5 +85,5 @@ const checkFinalStage = () => {
 initGame();
 // 状態読み込み
 loadState();
-loadKeywords();
+loadMemo();
 checkFinalStage();
