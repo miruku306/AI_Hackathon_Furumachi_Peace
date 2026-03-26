@@ -47,7 +47,7 @@ function checkAnswer() {
 
     // 軽い演出（0.5秒後に遷移）
     setTimeout(() => {
-      window.location.href = "end.html";
+      window.location.href = "endmap.html";
     }, 200);
 
   } else {

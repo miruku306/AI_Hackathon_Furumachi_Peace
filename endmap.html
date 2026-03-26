@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>次の目的地西堀ローサ</title>
+
+  <link rel="stylesheet" href="css/nextmap.css">
+</head>
+
+<body>
+
+  <!-- 背景canvas（必須） -->
+  <canvas id="canvas"></canvas>
+
+  <!-- 画面 -->
+  <div class="app">
+
+    <!-- タイトル -->
+    <div class="card title-card">
+      <h1>次の目的地</h1>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.3559669124743!2d139.04112411195106!3d37.92211370354126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff4c9ee4b0ea5e7%3A0x8a127583484aa432!2z6KW_5aCA44Ot44O844K1!5e0!3m2!1sja!2sjp!4v1774508401631!5m2!1sja!2sjp"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- 住所 -->
+    <div class="card place-card">
+      <h2>西堀ローサ</h2>
+      <p class="address">新潟県新潟市中央区西堀前通６番町８９４−１</p>
+    </div>
+
+    <!-- 戻るボタン -->
+    <a href="home.html" class="home-btn">ホームに戻る</a>
+
+  </div>
+
+  <script src="js/bg.js"></script>
+
+</body>
+</html>
