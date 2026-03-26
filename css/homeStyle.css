@@ -107,16 +107,7 @@ body {
     margin: 10px 0;
     cursor: pointer;
     transition: 0.2s;
-}
-
-/* ロック状態 */
-.stage.lock {
-    background: #ccc;
-}
-
-/* 解放状態 */
-.stage.open {
-    background: #fff;
+    background: #ccc; /* デフォルトはロック状態 */
 }
 
 /* クリア状態 */
