@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ホーム画面</title>
+  <link rel="stylesheet" href="css/homeStyle.css">
+</head>
+<body>
+    <!-- 背景 -->
+    <canvas id="canvas"></canvas>
+
+    <!-- ハンバーガーメニュー・ボタン -->
+    <div id="hamburger">キーワード確認</div>
+    <!-- メニュー内容（キーワード） -->
+    <nav id="menu">
+        <ul id="keywordList">
+            <li> </li>
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </nav>
+
+    <!-- メイン -->
+     <div class="container">
+        <div class="card">
+
+            <div class="title-box">
+                <h2>古町に眠る<br>古マチピースを探せ！！</h2>
+            </div>
+
+            <p class="story">
+                かつて古町には、すべてを手にした人物<br>
+                「古町王 古町・N・ローサ」が存在した<br>
+                彼は死の直前、こう言い残した<br>
+                「古マチピースは・・・この街に置いてきた」<br>
+                その場所を知る者はいない<br>
+                手掛かりは”町に残された謎”のみ<br>
+                ーー君は探偵としてその謎に挑むことになる<br>
+            </p>
+
+            <!-- ステージ 🔒🔓-->
+            <div class="stage lock"><span>・謎1</span><span class="status">🔒</span></div>
+            <div class="stage lock"><span>・謎2</span><span class="status">🔒</span></div>
+            <div class="stage lock"><span>・謎3</span><span class="status">🔒</span></div>
+            <div class="stage lock"><span>・謎4</span><span class="status">🔒</span></div>
+
+        </div>
+     </div>
+    
+    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/bg.js"></script>
+</body>
+</html>
