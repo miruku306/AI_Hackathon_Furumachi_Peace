@@ -26,12 +26,17 @@ resetBtn.addEventListener("click", () => {
   errorMessage.textContent = "";
 });
 
+// 今のステージ番号
+const stageIndex = 2;
+
 // 判定処理
 function checkAnswer() {
 
   const userAnswer = input.value.trim().toUpperCase();
 
   if (userAnswer === CORRECT_ANSWER) {
+    // クリア状態保存
+    sessionStorage.setItem(`clear_${stageIndex}`, "true");
 
     // 入力部分を隠す
     answerSection.style.display = "none";
